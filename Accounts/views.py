@@ -24,4 +24,26 @@ def register(request):
                 return redirect('login')
         else:
             messages.info(request,'Password Not The Same')
-            return redirect
+            return redirect('register')
+    else:
+        return render(request,'registration/register.html')
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        user = auth.authenticate(username=username,password=password)
+        
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request,'Invalid Credentials')
+            return redirect('login')
+    else:
+        return render(request,'registration/login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
