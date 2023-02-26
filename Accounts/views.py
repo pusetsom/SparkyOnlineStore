@@ -8,7 +8,7 @@ def register(request):
     if request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']
-        password = request.POST['password']
+        password = request.POST['password1']
         password2 = request.POST['password2']
     
         if password == password2:
