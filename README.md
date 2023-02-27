@@ -6,3 +6,4 @@ PLP Group 24 Hackathon Members: February 2023
         Karabo Malehu Molepo
         Daniel Kimeli Kwambai
         Pusetso Mguzulwa
+        Bafana 
