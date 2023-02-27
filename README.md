@@ -8,8 +8,9 @@ PLP Group 24 Hackathon Members: February 2023
         Pusetso Mguzulwa
         Bafana
         
-        Purpose of our project.
+        PURPOSE OF OUR PROJECT.
 To make it convenient for people to purchase high quality products from the comforts of their homes thus saving them the time to go to the store and waiting in line.
 
-       Technical Requirements.
+       
+        TECHNICAL REQUIREMENTS.
 Programming languages : html, css, django framework,bootstrap
