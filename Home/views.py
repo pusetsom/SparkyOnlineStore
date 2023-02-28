@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Product
 from .form import ProductForm
 
@@ -29,3 +29,20 @@ def add_product(request):
     }
    
     return render(request,"home/create.html",context)
+
+def update(request,pk):
+    listing = Product.objects.get(id=pk)
+    form = ProductForm(instance=listing)
+    if request.method == "POST":
+        form = ProductForm(request.POST,instance=listing , files=request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+    
+    
+    
+    context = {
+        "form":form
+    }
+   
+    return render(request,"home/update.html",context)
