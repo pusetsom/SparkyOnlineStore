@@ -46,3 +46,8 @@ def update(request,pk):
     }
    
     return render(request,"home/update.html",context)
+
+def delete(request,pk):
+    listing = Product.objects.get(id=pk)
+    delete()
+    return redirect("/")
